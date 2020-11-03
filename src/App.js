@@ -1,23 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import { Container } from "react-bootstrap";
+import Tarjeta from "./Components/Tarjeta";
+
 
 function App() {
+  const products = [
+    {
+      id: 1,
+      img: "",
+      title: "image 1",
+    },
+  ];
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Container>
+        <Tarjeta products={products} />
+      </Container>
     </div>
   );
 }
